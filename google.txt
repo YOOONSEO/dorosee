@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+	<meta charset="euc-kr">
+
+	<title>Google map</title>
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+	<script>
+
+		function initialize() {
+
+			var Y_point			= 37.444015;		// Y 좌표
+			var X_point			= 126.661355;		// X 좌표
+			
+           	var Y_point1		= 37.442283;		// Y 좌표
+			var X_point1		= 126.652396;		// X 좌표
+
+            var Y_point2		= 37.442573;		// Y 좌표
+			var X_point2		= 126.6517425;		// X 좌표
+          
+            var Y_point3		= 37.442876;		// Y 좌표
+			var X_point3		= 126.651093;		// X 좌표
+			
+           	var Y_point4		= 37.443236;		// Y 좌표
+			var X_point4		= 126.663336;		// X 좌표
+
+            var Y_point5		= 37.443718;		// Y 좌표
+			var X_point5		= 126.662029;		// X 좌표
+          
+            var Y_point6		= 37.443978;		// Y 좌표
+			var X_point6		= 126.661491;		// X 좌표
+
+            var Y_point7		= 37.446198;		// Y 좌표
+			var X_point7		= 126.666678;		// X 좌표
+          
+            var Y_point8		= 37.448932;		// Y 좌표
+			var X_point8		= 126.667095;		// X 좌표
+			
+           	var Y_point9		= 37.449631;		// Y 좌표
+			var X_point9		= 126.662270;		// X 좌표
+
+            var Y_point10		= 37.390015;		// Y 좌표
+			var X_point10		= 126.673855;		// X 좌표
+          
+			var zoomLevel		=16;				// 지도의 확대 레벨 : 숫자가 클수록 확대됨
+
+
+			var markerTitle		= "test";			// 현재 위치 마커에 마우스를 올렸을때 나타나는 정보
+			var markerMaxWidth	= 10;				// 마커를 클릭했을때 나타나는 말풍선의 최대 크기
+
+
+
+			// 말풍선 내용
+			 var strContent = "<div class='iwContent'><div class='iwHeader'>pothole</div>" +
+            "<img class='iwImage' src='1.png'/>"
+
+            var strContent1 = "<div class='iwContent'><div class='iwHeader'>37.443718, 126.662029</div>" +
+            "<img class='iwImage' src='1.png'/>"
+            
+            var strContent2 = "<div class='iwContent'><div class='iwHeader'>37.443978, 126.661491</div>" +
+            "<img class='iwImage' src='2.png'/>"
+            
+            var strContent3 = "<div class='iwContent'><div class='iwHeader'>37.442283, 126.652396</div>" +
+            "<img class='iwImage' src='3.png'/>"
+
+            var strContent4 = "<div class='iwContent'><div class='iwHeader'>37.442573, 126.651742</div>" +
+            "<img class='iwImage' src='4.png'/>"
+            
+            var strContent5 = "<div class='iwContent'><div class='iwHeader'>37.448932, 126.667095</div>" +
+            "<img class='iwImage' src='5.png'/>"
+            
+            var strContent6 = "<div class='iwContent'><div class='iwHeader'>37.442876, 126.651093</div>" +
+            "<img class='iwImage' src='6.png'/>"
+            
+            var strContent7 = "<div class='iwContent'><div class='iwHeader'>37.443236, 126.663336</div>" +
+            "<img class='iwImage' src='7.png'/>"
+            
+            var strContent8 = "<div class='iwContent'><div class='iwHeader'>37.449631, 126.662270</div>" +
+            "<img class='iwImage' src='8.png'/>"
+
+            var strContent9 = "<div class='iwContent'><div class='iwHeader'>37.446198, 126.666678</div>" +
+            "<img class='iwImage' src='9.png'/>"
+            
+            var strContent10= "<div class='iwContent'><div class='iwHeader'>10</div>" +
+            "<img class='iwImage' src='1.png'/>"
+            
+			var myLatlng = new google.maps.LatLng(Y_point, X_point);
+			var myLatlng1 = new google.maps.LatLng(Y_point1, X_point1);
+          	var myLatlng2 = new google.maps.LatLng(Y_point2, X_point2);
+            var myLatlng3 = new google.maps.LatLng(Y_point3, X_point3);
+          	var myLatlng4 = new google.maps.LatLng(Y_point4, X_point4);
+          	var myLatlng5 = new google.maps.LatLng(Y_point5, X_point5);
+          	var myLatlng6 = new google.maps.LatLng(Y_point6, X_point6);
+            var myLatlng7 = new google.maps.LatLng(Y_point7, X_point7);
+          	var myLatlng8 = new google.maps.LatLng(Y_point8, X_point8);
+            var myLatlng9 = new google.maps.LatLng(Y_point9, X_point9);
+          	var myLatlng10= new google.maps.LatLng(Y_point10,X_point10);
+          
+			var mapOptions = {
+								zoom: zoomLevel,
+								center: myLatlng,
+								mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+
+			var map = new google.maps.Map(document.getElementById('map_view'), mapOptions);
+
+
+/*
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: markerTitle
+			});
+*/
+			var marker1 = new google.maps.Marker({
+				position: myLatlng1,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker2 = new google.maps.Marker({
+				position: myLatlng2,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker3 = new google.maps.Marker({
+				position: myLatlng3,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker4 = new google.maps.Marker({
+				position: myLatlng4,
+				map: map,
+				title: markerTitle
+			});
+          
+          	var marker5 = new google.maps.Marker({
+				position: myLatlng5,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker6 = new google.maps.Marker({
+				position: myLatlng6,
+				map: map,
+				title: markerTitle
+			});
+          
+          	var marker7 = new google.maps.Marker({
+				position: myLatlng7,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker8 = new google.maps.Marker({
+				position: myLatlng8,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker9 = new google.maps.Marker({
+				position: myLatlng9,
+				map: map,
+				title: markerTitle
+			});
+          
+            var marker10= new google.maps.Marker({
+				position: myLatlng10,
+				map: map,
+				title: markerTitle
+			});
+
+			//var infowindow = new google.maps.InfoWindow({content: strContent});
+			var infowindow1 = new google.maps.InfoWindow({content: strContent1});
+   			var infowindow2 = new google.maps.InfoWindow({content: strContent2});
+            var infowindow3 = new google.maps.InfoWindow({content: strContent3});
+			var infowindow4 = new google.maps.InfoWindow({content: strContent4});
+   			var infowindow5 = new google.maps.InfoWindow({content: strContent5});
+          	var infowindow6 = new google.maps.InfoWindow({content: strContent6});
+			var infowindow7 = new google.maps.InfoWindow({content: strContent7});
+   			var infowindow8 = new google.maps.InfoWindow({content: strContent8});
+          	var infowindow9 = new google.maps.InfoWindow({content: strContent9});
+			var infowindow10= new google.maps.InfoWindow({content: strContent10});
+          
+			//google.maps.event.addListener(marker, 'click', function() {infowindow.open(map, marker);});
+            google.maps.event.addListener(marker1, 'click', function() {infowindow1.open(map, marker1);});
+            google.maps.event.addListener(marker2, 'click', function() {infowindow2.open(map, marker2);});
+            google.maps.event.addListener(marker3, 'click', function() {infowindow3.open(map, marker3);});
+            google.maps.event.addListener(marker4, 'click', function() {infowindow4.open(map, marker4);});
+            google.maps.event.addListener(marker5, 'click', function() {infowindow5.open(map, marker5);});
+            google.maps.event.addListener(marker6, 'click', function() {infowindow6.open(map, marker6);});
+            google.maps.event.addListener(marker7, 'click', function() {infowindow7.open(map, marker7);});
+            google.maps.event.addListener(marker8, 'click', function() {infowindow8.open(map, marker8);});
+            google.maps.event.addListener(marker9, 'click', function() {infowindow9.open(map, marker9);});
+            google.maps.event.addListener(marker10, 'click', function() {infowindow10.open(map, marker10);});
+
+        }
+
+	</script>
+
+</head>
+
+
+
+<body onload="initialize()">
+
+	<div id="map_view" style="width:1500px; height:700px;"></div>
+
+</body>
+
+</html>
